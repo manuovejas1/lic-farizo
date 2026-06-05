@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #8a2be2;
+  --color-secondary: #d8bfd8;
+  --color-lavender: #e6e6fa;
+  --color-background: #f8f9fa;
+  --color-text: #4a4a4a;
+  --color-text-muted: #6b6b6b;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-lavender: var(--color-lavender);
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --font-sans: var(--font-montserrat);
+  --font-display: var(--font-lora);
+  --font-accent: var(--font-dancing);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-lavender);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+.font-accent {
+  font-family: var(--font-dancing), cursive;
+}
+
+.gradient-hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-background) 0%,
+    var(--color-lavender) 45%,
+    var(--color-secondary) 100%
+  );
+}
+
+.gradient-cta {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    #9b4deb 50%,
+    var(--color-secondary) 100%
+  );
+}
+
+.card-glow {
+  box-shadow:
+    0 4px 24px -4px rgba(138, 43, 226, 0.08),
+    0 0 0 1px rgba(216, 191, 216, 0.2);
+}
+
+.card-glow:hover {
+  box-shadow:
+    0 8px 32px -4px rgba(138, 43, 226, 0.14),
+    0 0 0 1px rgba(216, 191, 216, 0.35);
+}
+
+.organic-blob {
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}
