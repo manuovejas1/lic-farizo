@@ -87,7 +87,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-[2rem] ring-1 ring-secondary/40" />
             <Image
               src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"
-              alt="Psicóloga en consultorio con luz natural cálida y ambiente acogedor"
+              alt="Psicóloga profesional con luz natural cálida y presencia cercana"
               fill
               priority
               className="object-cover"

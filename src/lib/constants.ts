@@ -14,16 +14,16 @@ export const SITE_CONFIG = {
   tagline: "Un espacio seguro para florecer a tu ritmo",
   puv: "Un espacio seguro y moderno donde la ciencia psicológica se encuentra con la empatía humana para ayudarte a florecer a tu propio ritmo.",
   description:
-    "Terapia psicológica accesible, empática y basada en evidencia. Te acompaño a gestionar tus emociones y mejorar tu calidad de vida.",
+    "Terapia psicológica online, accesible, empática y basada en evidencia. Te acompaño a gestionar tus emociones desde donde estés.",
   mission:
-    "Ofrecer terapia psicológica accesible, empática y basada en evidencia, ayudando a las pacientes a gestionar sus emociones y mejorar su calidad de vida.",
+    "Ofrecer terapia psicológica online accesible, empática y basada en evidencia, ayudando a las pacientes a gestionar sus emociones y mejorar su calidad de vida.",
   url: "https://lic.camilafarizo.com",
-  email: "contacto@lic.camilafarizo.com",
-  phone: "+52 XX XXXX XXXX",
-  whatsapp: "52XXXXXXXXXX",
+  email: "camilafarizo@gmail.com",
+  phone: "+541136665948",
+  whatsapp: "541136665948",
   instagram: "https://www.instagram.com/lic.camilafarizo/",
   instagramHandle: "@lic.camilafarizo",
-  location: "Ciudad de México · Consultas presenciales y en línea",
+  location: "Buenos Aires, Argentina · Consultas 100% online",
   bookingUrl: "#contacto",
 } as const;
 
@@ -139,9 +139,9 @@ export const DIFFERENTIATORS: Differentiator[] = [
   },
   {
     id: "sensory",
-    title: "Estética sensorial",
+    title: "Experiencia acogedora",
     description:
-      "Consultorio cuidado con té de especialidad y aromaterapia relajante para una experiencia acogedora.",
+      "Un espacio virtual cuidado, con ritual de bienvenida y ambiente relajante para que te sientas cómoda desde tu lugar.",
     icon: "leaf",
   },
   {
@@ -175,31 +175,7 @@ export const TESTIMONIALS: Testimonial[] = [
     content:
       "Llegué con ansiedad y sobrepensamiento constante. Camila me dio herramientas prácticas y hoy duermo mejor y disfruto más el presente.",
     rating: 5,
-  },
-  {
-    id: "2",
-    name: "Carla M.",
-    role: "En proceso de sanación · 35 años",
-    content:
-      "Tenía miedo de ser juzgada, pero desde la primera sesión me sentí comprendida. Trabajamos mis límites y hoy tengo vínculos mucho más sanos.",
-    rating: 5,
-  },
-  {
-    id: "3",
-    name: "Laura G.",
-    role: "Madre y profesional · 42 años",
-    content:
-      "Sentía que había postergado mis sueños. El acompañamiento me ayudó a reconectar conmigo misma y recuperar mi propósito con calma.",
-    rating: 5,
-  },
-  {
-    id: "4",
-    name: "Valentina S.",
-    role: "Paciente online",
-    content:
-      "Las sesiones en línea fueron igual de cercanas. El welcome pack y los recursos post-sesión hacen que el proceso se sienta muy cuidado.",
-    rating: 5,
-  },
+  }
 ];
 
 export const FAQ_ITEMS: FAQItem[] = [
@@ -217,15 +193,15 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     id: "frequency",
-    question: "¿Con qué frecuencia debo asistir?",
+    question: "¿Con qué frecuencia debo tener sesiones?",
     answer:
       "Generalmente se recomienda una sesión semanal, especialmente al inicio. La frecuencia se ajusta según tus necesidades y avances.",
   },
   {
     id: "online",
-    question: "¿Ofrecen consultas en línea?",
+    question: "¿Las sesiones son online?",
     answer:
-      "Sí, ofrezco consultas presenciales y en línea por videollamada. Ambas modalidades mantienen la misma calidad y confidencialidad.",
+      "Sí, todas las consultas son por videollamada. Podés conectarte desde donde te sientas más cómoda, con la misma calidad y confidencialidad.",
   },
   {
     id: "first-session",
@@ -237,7 +213,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "cost",
     question: "¿Cuál es el costo de las sesiones?",
     answer:
-      "El costo varía según la modalidad (presencial u online). Puedes solicitar información detallada al agendar tu entrevista Match gratuita.",
+      "Podés solicitar información detallada sobre el valor de las sesiones online al agendar tu entrevista Match gratuita.",
   },
   {
     id: "cancellation",
@@ -254,7 +230,7 @@ export const ABOUT_CONTENT = {
 No tienes que poder con todo sola. Mi enfoque combina la ciencia psicológica con una presencia profundamente humana: cálida, reflexiva y serena. Creo que cada persona posee los recursos para transformar su vida; mi rol es acompañarte a descubrirlos a tu propio ritmo.`,
   cta: "¿Empezamos tu proceso?",
   education: [
-    "Licenciatura en Psicología — Universidad Nacional Autónoma de México",
+    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA)",
     "Maestría en Psicología Clínica — Instituto de Estudios Superiores",
     "Certificación en Terapia Cognitivo-Conductual",
     "Formación continua en Mindfulness y Regulación Emocional",

@@ -194,7 +194,7 @@ export function Contact() {
                   value={form.phone}
                   onChange={(e) => updateField("phone", e.target.value)}
                   className="w-full rounded-xl border border-primary/15 bg-white px-4 py-3 text-text transition-colors placeholder:text-text-muted/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  placeholder="+52 55 0000 0000"
+                  placeholder="+54 11 0000 0000"
                 />
               </div>
             </div>

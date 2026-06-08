@@ -31,7 +31,7 @@ export function About() {
           >
             <Image
               src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80"
-              alt={`${SITE_CONFIG.name} en su consultorio con luz natural`}
+              alt={`${SITE_CONFIG.name}, psicóloga clínica online`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 80vw, 40vw"
