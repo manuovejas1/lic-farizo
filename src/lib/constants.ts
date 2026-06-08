@@ -9,8 +9,8 @@ import type {
 
 export const SITE_CONFIG = {
   name: "Lic. Camila Farizo",
-  title: "Psicóloga Clínica",
-  specialization: "Psicologa Clinica",
+  title: "Psicóloga Clínica - M.N 89257",
+  specialization: "Psicologa Clinica - M.N 89257",
   tagline: "Un espacio seguro para florecer a tu ritmo",
   puv: "Un espacio seguro y moderno donde la ciencia psicológica se encuentra con la empatía humana para ayudarte a florecer a tu propio ritmo.",
   description:
@@ -229,10 +229,7 @@ export const ABOUT_CONTENT = {
 No tienes que poder con todo sola. Mi enfoque combina la ciencia psicológica con una presencia profundamente humana: cálida, reflexiva y serena. Creo que cada persona posee los recursos para transformar su vida; mi rol es acompañarte a descubrirlos a tu propio ritmo.`,
   cta: "¿Empezamos tu proceso?",
   education: [
-    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA)",
-    "Maestría en Psicología Clínica — Instituto de Estudios Superiores",
-    "Certificación en Terapia Cognitivo-Conductual",
-    "Formación continua en Mindfulness y Regulación Emocional",
+    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) - M.N 89257"
   ],
   specialties: [
     "Ansiedad Generalizada",
