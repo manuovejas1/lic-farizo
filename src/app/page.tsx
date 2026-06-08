@@ -6,7 +6,6 @@ import { Differentiation } from "@/components/sections/Differentiation";
 import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
-import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <Services />
       <Benefits />
       <Differentiation />
-      <Testimonials />
       <FAQ />
       <CTA />
       <Contact />
