@@ -10,7 +10,7 @@ import type {
 export const SITE_CONFIG = {
   name: "Lic. Camila Farizo",
   title: "Psicóloga Clínica",
-  specialization: "Ansiedad en Mujeres Profesionales",
+  specialization: "Psicologa Clinica",
   tagline: "Un espacio seguro para florecer a tu ritmo",
   puv: "Un espacio seguro y moderno donde la ciencia psicológica se encuentra con la empatía humana para ayudarte a florecer a tu propio ritmo.",
   description:
@@ -162,7 +162,7 @@ export const DIFFERENTIATORS: Differentiator[] = [
     id: "specialization",
     title: "Especialización enfocada",
     description:
-      "Posicionamiento experto en ansiedad para mujeres profesionales: burnout, sobrepensamiento y equilibrio vital.",
+      "Posicionamiento experto en ansiedad para profesionales: burnout, sobrepensamiento y equilibrio vital.",
     icon: "target",
   },
 ];
@@ -236,7 +236,7 @@ No tienes que poder con todo sola. Mi enfoque combina la ciencia psicológica co
     "Formación continua en Mindfulness y Regulación Emocional",
   ],
   specialties: [
-    "Ansiedad en mujeres profesionales",
+    "Ansiedad Generalizada",
     "Burnout y estrés crónico",
     "Autoestima y amor propio",
     "Relaciones y límites emocionales",
