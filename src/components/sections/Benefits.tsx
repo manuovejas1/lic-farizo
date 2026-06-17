@@ -8,18 +8,16 @@ import { BENEFITS, SITE_CONFIG } from "@/lib/constants";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   Heart,
-  Lock,
   Shield,
-  Sparkles,
   Sprout,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
   heart: Heart,
-  lock: Lock,
-  sparkles: Sparkles,
   shield: Shield,
+  users: Users,
   sprout: Sprout,
 };
 
@@ -32,7 +30,7 @@ export function Benefits() {
         <SectionTitle
           eyebrow="Lo que me define"
           title="Mis valores"
-          subtitle="Empatía, confidencialidad y respeto en cada encuentro. Una presencia serena que te acompaña sin juzgar."
+          subtitle="Empatía, respeto, acompañamiento y crecimiento en cada encuentro."
         />
 
         <div className="grid gap-10 sm:grid-cols-2 lg:gap-12">
@@ -75,7 +73,7 @@ export function Benefits() {
           transition={{ duration: 0.6 }}
         >
           <p className="font-accent mb-6 text-2xl text-primary sm:text-3xl">
-            No tienes que poder con todo sola
+            Gracias por estar acá
           </p>
           <Button href={SITE_CONFIG.bookingUrl} size="lg">
             Reservar una consulta

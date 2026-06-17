@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #8a2be2;
-  --color-secondary: #d8bfd8;
-  --color-lavender: #e6e6fa;
-  --color-background: #f8f9fa;
-  --color-text: #4a4a4a;
-  --color-text-muted: #6b6b6b;
+  --color-primary: #6b5b7a;
+  --color-secondary: #c9b8d9;
+  --color-lavender: #ede8f5;
+  --color-background: #f7f4fa;
+  --color-text: #4a4458;
+  --color-text-muted: #6e6678;
 }
 
 @theme inline {
@@ -68,21 +68,21 @@ body {
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
-    #9b4deb 50%,
+    #857595 50%,
     var(--color-secondary) 100%
   );
 }
 
 .card-glow {
   box-shadow:
-    0 4px 24px -4px rgba(138, 43, 226, 0.08),
-    0 0 0 1px rgba(216, 191, 216, 0.2);
+    0 4px 24px -4px rgba(107, 91, 122, 0.08),
+    0 0 0 1px rgba(201, 184, 217, 0.25);
 }
 
 .card-glow:hover {
   box-shadow:
-    0 8px 32px -4px rgba(138, 43, 226, 0.14),
-    0 0 0 1px rgba(216, 191, 216, 0.35);
+    0 8px 32px -4px rgba(107, 91, 122, 0.14),
+    0 0 0 1px rgba(201, 184, 217, 0.4);
 }
 
 .organic-blob {

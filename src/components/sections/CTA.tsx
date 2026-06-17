@@ -23,14 +23,14 @@ export function CTA() {
           <div className="organic-blob pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 bg-white/10" />
 
           <p className="font-accent mb-5 text-2xl text-white/90 sm:text-3xl">
-            Tu momento es ahora
+            Este es tu espacio
           </p>
 
           <h2
             id="cta-heading"
             className="font-display mx-auto max-w-2xl text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-5xl"
           >
-            Dar el primer paso puede cambiar tu vida.
+            Tu bienestar y crecimiento personal empiezan acá.
           </h2>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/85 sm:text-lg">

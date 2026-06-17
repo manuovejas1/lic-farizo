@@ -14,7 +14,7 @@ export interface Benefit {
   id: string;
   title: string;
   description: string;
-  icon: "heart" | "lock" | "sparkles" | "shield" | "sprout";
+  icon: "heart" | "lock" | "sparkles" | "shield" | "sprout" | "users";
 }
 
 export interface Differentiator {

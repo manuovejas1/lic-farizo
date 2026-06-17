@@ -25,7 +25,7 @@ const dancing = Dancing_Script({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#8A2BE2",
+  themeColor: "#6B5B7A",
   width: "device-width",
   initialScale: 1,
 };
