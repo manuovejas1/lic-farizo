@@ -101,16 +101,16 @@ export function Hero() {
 
             <motion.h1
               id="hero-heading"
-              className="font-display text-3xl font-medium leading-tight text-text sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15] xl:text-5xl"
+              className="font-display text-4xl font-medium leading-none text-text sm:text-5xl lg:text-6xl"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              {SITE_CONFIG.tagline}
+              ¡Bienvenidos!
             </motion.h1>
 
             <motion.p
-              className="font-accent mt-2 flex items-center gap-2 text-xl text-primary sm:text-2xl"
+              className="font-accent mt-3 flex items-center gap-2 text-xl text-primary sm:text-2xl"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
@@ -121,6 +121,15 @@ export function Hero() {
                 className="fill-primary/20 text-primary"
                 aria-hidden="true"
               />
+            </motion.p>
+
+            <motion.p
+              className="mt-4 text-lg leading-relaxed text-text-muted sm:text-xl"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.18 }}
+            >
+              {SITE_CONFIG.tagline}
             </motion.p>
 
             <motion.p
