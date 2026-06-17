@@ -89,7 +89,7 @@ export function Hero() {
       </div>
 
       <Container className="relative py-10 sm:py-14 lg:py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,38%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_420px] xl:gap-10">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,38%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_420px] xl:gap-10">
           <div className="relative z-10 max-w-xl lg:max-w-none">
             <motion.div
               initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ export function Hero() {
           </div>
 
           <motion.div
-            className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:mx-0 lg:max-w-none"
+            className="relative mx-auto w-full max-w-[280px] sm:max-w-sm lg:mx-0 lg:max-w-none"
             initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -243,24 +243,24 @@ export function Hero() {
               aria-hidden="true"
             />
             <div
-              className="absolute -inset-3 rounded-[2.5rem] bg-gradient-to-br from-white/70 via-lavender/40 to-secondary/30 sm:-inset-4"
+              className="absolute -inset-2 rounded-[1.75rem] bg-gradient-to-br from-white/70 via-lavender/40 to-secondary/30 sm:-inset-4 sm:rounded-[2.5rem]"
               aria-hidden="true"
             />
 
             <div className="relative">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-t-[999px] rounded-b-3xl shadow-xl shadow-primary/10 ring-1 ring-white/60">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[1.75rem] shadow-xl shadow-primary/10 ring-1 ring-white/60 sm:aspect-[4/5] sm:rounded-t-[999px] sm:rounded-b-3xl">
                 <Image
                   src={SITE_CONFIG.photo}
                   alt={`${SITE_CONFIG.name}, psicóloga clínica`}
                   fill
                   priority
-                  className="object-cover object-[center_15%]"
-                  sizes="(max-width: 1024px) 320px, 420px"
+                  className="object-cover object-[center_12%] sm:object-[center_15%]"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 420px"
                 />
               </div>
 
               <motion.div
-                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-5"
+                className="absolute -bottom-3 -left-3 hidden sm:block sm:-bottom-4 sm:-left-5"
                 initial={
                   prefersReducedMotion ? false : { opacity: 0, scale: 0.9 }
                 }
@@ -271,20 +271,24 @@ export function Hero() {
               </motion.div>
 
               <motion.div
-                className="absolute -right-1 top-6 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur-sm sm:-right-3 sm:top-8 sm:px-5 sm:py-4"
+                className="absolute right-3 top-3 rounded-xl bg-white/95 px-3 py-2 shadow-lg backdrop-blur-sm sm:-right-3 sm:top-8 sm:rounded-2xl sm:px-5 sm:py-4"
                 initial={
                   prefersReducedMotion ? false : { opacity: 0, x: 16 }
                 }
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <p className="font-accent text-lg text-primary sm:text-xl">
+                <p className="font-accent text-base text-primary sm:text-xl">
                   15 min
                 </p>
-                <p className="text-[11px] text-text-muted sm:text-xs">
+                <p className="text-[10px] text-text-muted sm:text-xs">
                   Entrevista Match gratuita
                 </p>
               </motion.div>
+            </div>
+
+            <div className="mt-4 flex justify-center sm:hidden">
+              <ValuesSeal />
             </div>
           </motion.div>
         </div>
