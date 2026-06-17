@@ -19,8 +19,7 @@ export const SITE_CONFIG = {
     "Terapia psicológica online para adolescentes, jóvenes adultos y adultos. Accesible, empática y basada en evidencia.",
   mission:
     "Te acompaño a construir herramientas para tu bienestar y crecimiento personal, con un trabajo integral y un enfoque centrado en vos.",
-  audience:
-    "Adolescentes, jóvenes adultos y adultos. No atiendo niños.",
+  audience: "Adolescentes, jóvenes adultos y adultos.",
   approach:
     "Trabajo de manera integral, con un enfoque centrado en la persona y en lo que cada consultante necesita.",
   url: "https://lic.camilafarizo.com",
@@ -187,7 +186,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "audience",
     question: "¿A quién está dirigida la consulta?",
     answer:
-      "Atiendo adolescentes, jóvenes adultos y adultos. No trabajo con niños. El espacio está abierto tanto para hombres como para mujeres.",
+      "Atiendo adolescentes, jóvenes adultos y adultos. El espacio está abierto tanto para hombres como para mujeres.",
   },
   {
     id: "duration",
@@ -252,7 +251,7 @@ export const ABOUT_CONTENT = {
     },
     {
       id: "audience",
-      text: "Atiendo adolescentes, jóvenes adultos y adultos. No trabajo con niños.",
+      text: "Atiendo adolescentes, jóvenes adultos y adultos.",
       highlight: "adolescentes, jóvenes adultos y adultos",
     },
     {

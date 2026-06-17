@@ -40,8 +40,7 @@ export function About() {
               {SITE_CONFIG.approach}
             </p>
             <p className="mt-5 text-base leading-relaxed text-text-muted sm:text-lg">
-              Atención para adolescentes, jóvenes adultos y adultos.{" "}
-              <strong className="font-semibold text-text">No atiendo niños.</strong>
+              Atención para adolescentes, jóvenes adultos y adultos.
             </p>
             <p className="mt-5 text-base leading-relaxed text-text-muted sm:text-lg">
               {SITE_CONFIG.mission}
