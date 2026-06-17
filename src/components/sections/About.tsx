@@ -17,7 +17,7 @@ export function About() {
         <SectionTitle
           eyebrow="Formación y enfoque"
           title="Sobre mí"
-          subtitle="Psicóloga clínica recibida en la UBA. Un espacio cercano, práctico y sin juicios para tu salud mental."
+          subtitle="Psicóloga clínica recibida en la UBA. Atención para adolescentes, jóvenes adultos y adultos."
         />
 
         <div className="mx-auto max-w-3xl space-y-10">
@@ -34,12 +34,17 @@ export function About() {
                 Universidad de Buenos Aires
               </strong>
               . Creé este espacio para hablar de salud mental de una forma
-              cercana, práctica y sin juicios — porque creo que pedir ayuda no
-              debería dar miedo.
+              cercana, práctica y sin juicios — abierto a hombres y mujeres.
             </p>
             <p className="mt-5 text-base leading-relaxed text-text-muted sm:text-lg">
-              {SITE_CONFIG.mission} Trabajo con un enfoque basado en evidencia
-              y una presencia profundamente humana: cálida, reflexiva y serena.
+              {SITE_CONFIG.approach}
+            </p>
+            <p className="mt-5 text-base leading-relaxed text-text-muted sm:text-lg">
+              Atención para adolescentes, jóvenes adultos y adultos.{" "}
+              <strong className="font-semibold text-text">No atiendo niños.</strong>
+            </p>
+            <p className="mt-5 text-base leading-relaxed text-text-muted sm:text-lg">
+              {SITE_CONFIG.mission}
             </p>
           </motion.div>
 

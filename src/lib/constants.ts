@@ -9,14 +9,20 @@ import type {
 
 export const SITE_CONFIG = {
   name: "Lic. Camila Farizo",
-  title: "Psicóloga Clínica - ",
-  specialization: "Psicologa Clinica - M.N 89257",
+  firstName: "Camila",
+  age: 28,
+  title: "Psicóloga Clínica - M.N 89257",
+  specialization: "Psicóloga Clínica · M.N 89257",
   tagline: "Un espacio seguro para florecer a tu ritmo",
   puv: "Un espacio seguro y moderno donde la ciencia psicológica se encuentra con la empatía humana para ayudarte a florecer a tu propio ritmo.",
   description:
-    "Terapia psicológica online, accesible, empática y basada en evidencia. Te acompaño a gestionar tus emociones desde donde estés.",
+    "Terapia psicológica online para adolescentes, jóvenes adultos y adultos. Accesible, empática y basada en evidencia.",
   mission:
-    "Ofrecer terapia psicológica online accesible, empática y basada en evidencia, ayudando a las pacientes a gestionar sus emociones y mejorar su calidad de vida.",
+    "Te acompaño a construir herramientas para tu bienestar y crecimiento personal, con un trabajo integral y un enfoque centrado en vos.",
+  audience:
+    "Adolescentes, jóvenes adultos y adultos. No atiendo niños.",
+  approach:
+    "Trabajo de manera integral, con un enfoque centrado en la persona y en lo que cada consultante necesita.",
   url: "https://lic.camilafarizo.com",
   email: "camilafarizo@gmail.com",
   phone: "+541136665948",
@@ -25,13 +31,13 @@ export const SITE_CONFIG = {
   instagramHandle: "@lic.camilafarizo",
   location: "Buenos Aires, Argentina · Consultas 100% online",
   bookingUrl: "#contacto",
+  photo: "/camila-farizo.png",
 } as const;
 
 export const BRAND_VALUES = [
   "Empatía",
-  "Confidencialidad",
-  "Autenticidad",
   "Respeto",
+  "Acompañamiento",
   "Crecimiento",
 ] as const;
 
@@ -64,7 +70,7 @@ export const SERVICES: Service[] = [
     id: "self-esteem",
     title: "Autoestima",
     description:
-      "Trabajo profundo para sanar la autocrítica, reconectar con tu valor y cultivar una relación más amorosa contigo misma.",
+      "Trabajo profundo para sanar la autocrítica, reconectar con tu valor y fortalecer la confianza en vos mismo/a.",
     icon: "heart",
   },
   {
@@ -88,22 +94,8 @@ export const BENEFITS: Benefit[] = [
     id: "empathy",
     title: "Empatía",
     description:
-      "Una guía comprensiva, no una figura de autoridad inalcanzable. Te escucho con calidez y sin juicios.",
+      "Te escucho con calidez y sin juicios. Una guía comprensiva, no una figura de autoridad inalcanzable.",
     icon: "heart",
-  },
-  {
-    id: "confidentiality",
-    title: "Confidencialidad",
-    description:
-      "Tu privacidad es sagrada. Todo lo que compartas permanece protegido bajo el secreto profesional.",
-    icon: "lock",
-  },
-  {
-    id: "authenticity",
-    title: "Autenticidad",
-    description:
-      "Un espacio genuino donde puedes ser tú misma, sin máscaras ni expectativas de perfección.",
-    icon: "sparkles",
   },
   {
     id: "respect",
@@ -113,10 +105,17 @@ export const BENEFITS: Benefit[] = [
     icon: "shield",
   },
   {
+    id: "accompaniment",
+    title: "Acompañamiento",
+    description:
+      "No estás solo/a en el camino. Te acompaño a construir herramientas concretas para tu bienestar emocional.",
+    icon: "users",
+  },
+  {
     id: "growth",
     title: "Crecimiento",
     description:
-      "Herramientas reales y prácticas para que avances hacia el bienestar emocional de forma sostenible.",
+      "Herramientas reales y prácticas para que avances hacia el bienestar emocional y el crecimiento personal.",
     icon: "sprout",
   },
 ];
@@ -126,7 +125,7 @@ export const DIFFERENTIATORS: Differentiator[] = [
     id: "welcome-pack",
     title: "Welcome Pack Digital",
     description:
-      "Al agendar tu primera sesión, recibes un PDF de bienvenida con todo lo que necesitas saber para comenzar con tranquilidad.",
+      "Al agendar tu primera sesión, recibes un PDF con todo lo que necesitas saber para comenzar con tranquilidad.",
     icon: "gift",
   },
   {
@@ -140,14 +139,14 @@ export const DIFFERENTIATORS: Differentiator[] = [
     id: "sensory",
     title: "Experiencia acogedora",
     description:
-      "Un espacio virtual cuidado, con ritual de bienvenida y ambiente relajante para que te sientas cómoda desde tu lugar.",
+      "Un espacio virtual cuidado y ambiente relajante para que te sientas cómodo/a desde tu lugar.",
     icon: "leaf",
   },
   {
     id: "whatsapp",
     title: "Seguimiento entre sesiones",
     description:
-      "Comunicación asíncrona por WhatsApp con límites claros, para que no te sientas sola entre citas.",
+      "Comunicación asíncrona por WhatsApp con límites claros, para acompañarte también entre citas.",
     icon: "message",
   },
   {
@@ -159,9 +158,9 @@ export const DIFFERENTIATORS: Differentiator[] = [
   },
   {
     id: "specialization",
-    title: "Especialización enfocada",
+    title: "Enfoque integral",
     description:
-      "Posicionamiento experto en ansiedad para profesionales: burnout, sobrepensamiento y equilibrio vital.",
+      "Trabajo centrado en la persona, integrando emociones, pensamientos y contexto de vida para un acompañamiento completo.",
     icon: "target",
   },
 ];
@@ -174,7 +173,7 @@ export const TESTIMONIALS: Testimonial[] = [
     content:
       "Llegué con ansiedad y sobrepensamiento constante. Camila me dio herramientas prácticas y hoy duermo mejor y disfruto más el presente.",
     rating: 5,
-  }
+  },
 ];
 
 export const FAQ_ITEMS: FAQItem[] = [
@@ -182,7 +181,13 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "match",
     question: "¿Qué es la entrevista Match de 15 minutos?",
     answer:
-      "Es una videollamada breve y gratuita antes de tu primera sesión. Nos permite conocernos, resolver dudas y confirmar que te sientes cómoda con mi forma de acompañarte.",
+      "Es una videollamada breve y gratuita antes de tu primera sesión. Nos permite conocernos, resolver dudas y confirmar que te sientes cómodo/a con mi forma de acompañarte.",
+  },
+  {
+    id: "audience",
+    question: "¿A quién está dirigida la consulta?",
+    answer:
+      "Atiendo adolescentes, jóvenes adultos y adultos. No trabajo con niños. El espacio está abierto tanto para hombres como para mujeres.",
   },
   {
     id: "duration",
@@ -200,13 +205,19 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "online",
     question: "¿Las sesiones son online?",
     answer:
-      "Sí, todas las consultas son por videollamada. Podés conectarte desde donde te sientas más cómoda, con la misma calidad y confidencialidad.",
+      "Sí, todas las consultas son por videollamada. Podés conectarte desde donde te sientas más cómodo/a, con la misma calidad y confidencialidad.",
   },
   {
     id: "first-session",
     question: "¿Qué sucede en la primera consulta?",
     answer:
-      "Es un espacio para conocernos, comprender tu motivo de consulta y definir juntas los objetivos del proceso. Recibirás tu Welcome Pack Digital con toda la información.",
+      "Es un espacio para conocernos, comprender tu motivo de consulta y definir juntos los objetivos del proceso. Recibirás tu Welcome Pack Digital con toda la información.",
+  },
+  {
+    id: "approach",
+    question: "¿Cuál es tu enfoque terapéutico?",
+    answer:
+      "Trabajo de manera integral, con un enfoque centrado en la persona. Esto significa considerar tu historia, emociones, pensamientos y contexto de vida para construir un acompañamiento adaptado a lo que necesitás.",
   },
   {
     id: "cost",
@@ -223,18 +234,40 @@ export const FAQ_ITEMS: FAQItem[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  greeting: `¡Hola! Soy ${SITE_CONFIG.name}, Psicóloga Clínica.`,
-  story: `Mi misión es ofrecerte un espacio seguro y libre de juicios donde podamos explorar juntas tus emociones. Sé que dar el primer paso y pedir ayuda puede dar miedo, pero quiero que sepas que aquí encontrarás empatía, contención y herramientas reales.
-
-No tienes que poder con todo sola. Mi enfoque combina la ciencia psicológica con una presencia profundamente humana: cálida, reflexiva y serena. Creo que cada persona posee los recursos para transformar su vida; mi rol es acompañarte a descubrirlos a tu propio ritmo.`,
-  cta: "¿Empezamos tu proceso?",
+  bioItems: [
+    {
+      id: "age",
+      text: "Tengo 28 años.",
+      highlight: "28 años",
+    },
+    {
+      id: "education",
+      text: "Me recibí en la Universidad de Buenos Aires.",
+      highlight: "Universidad de Buenos Aires",
+    },
+    {
+      id: "space",
+      text: "Creé este espacio para hablar de salud mental de una forma cercana, práctica y sin juicios.",
+      highlight: "salud mental",
+    },
+    {
+      id: "audience",
+      text: "Atiendo adolescentes, jóvenes adultos y adultos. No trabajo con niños.",
+      highlight: "adolescentes, jóvenes adultos y adultos",
+    },
+    {
+      id: "approach",
+      text: "Trabajo de manera integral, con un enfoque centrado en la persona.",
+      highlight: "enfoque centrado en la persona",
+    },
+  ],
   education: [
-    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) - M.N 89257"
+    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) · M.N 89257",
   ],
   specialties: [
     "Ansiedad Generalizada",
     "Burnout y estrés crónico",
-    "Autoestima y amor propio",
+    "Autoestima",
     "Relaciones y límites emocionales",
     "Desarrollo personal y autodescubrimiento",
   ],

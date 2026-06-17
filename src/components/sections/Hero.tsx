@@ -10,6 +10,8 @@ import {
   Heart,
   User,
   HandHeart,
+  Users,
+  Target,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -17,6 +19,8 @@ const bioIcons = {
   age: User,
   education: GraduationCap,
   space: HandHeart,
+  audience: Users,
+  approach: Target,
 } as const;
 
 function BrainHeartIcon({ className }: { className?: string }) {
@@ -44,60 +48,16 @@ function BrainHeartIcon({ className }: { className?: string }) {
   );
 }
 
-function LeafBranch({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 80 80"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M10 70C20 50 35 30 60 15"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M25 55C30 45 40 35 55 25"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        opacity="0.6"
-      />
-      <ellipse
-        cx="58"
-        cy="18"
-        rx="8"
-        ry="5"
-        transform="rotate(-30 58 18)"
-        stroke="currentColor"
-        strokeWidth="1"
-      />
-      <ellipse
-        cx="48"
-        cy="28"
-        rx="6"
-        ry="4"
-        transform="rotate(-20 48 28)"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity="0.7"
-      />
-    </svg>
-  );
-}
-
 function ValuesSeal() {
   return (
     <div
-      className="flex h-28 w-28 flex-col items-center justify-center rounded-full border border-secondary/60 bg-white/80 p-3 text-center shadow-sm backdrop-blur-sm sm:h-32 sm:w-32"
+      className="flex h-24 w-24 flex-col items-center justify-center rounded-full border border-secondary/60 bg-white/90 p-2.5 text-center shadow-md backdrop-blur-sm sm:h-28 sm:w-28"
       aria-label={`Valores: ${BRAND_VALUES.join(", ")}`}
     >
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        className="mb-1 h-5 w-5 text-primary/70"
+        className="mb-1 h-4 w-4 text-primary/70"
         aria-hidden="true"
       >
         <path
@@ -107,7 +67,7 @@ function ValuesSeal() {
           strokeLinejoin="round"
         />
       </svg>
-      <p className="text-[7px] font-medium uppercase leading-tight tracking-wider text-text-muted sm:text-[8px]">
+      <p className="text-[6px] font-medium uppercase leading-tight tracking-wider text-text-muted sm:text-[7px]">
         {BRAND_VALUES.join(" · ")}
       </p>
     </div>
@@ -120,176 +80,214 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="gradient-hero relative min-h-screen overflow-hidden pt-16 sm:pt-20"
+      className="gradient-hero relative overflow-hidden pt-16 sm:pt-20"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
-        <div className="absolute -left-24 bottom-1/4 h-72 w-72 rounded-full bg-lavender/60 blur-3xl" />
-        <LeafBranch className="absolute left-4 top-32 h-16 w-16 text-secondary/50 sm:left-8 sm:h-20 sm:w-20" />
-        <LeafBranch className="absolute bottom-20 right-8 h-14 w-14 rotate-180 text-secondary/40 sm:h-16 sm:w-16" />
+        <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-secondary/25 blur-3xl" />
+        <div className="absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-lavender/70 blur-3xl" />
       </div>
 
-      <Container className="relative flex min-h-[calc(100vh-4rem)] flex-col items-center gap-12 py-12 lg:min-h-[calc(100vh-5rem)] lg:flex-row lg:items-center lg:gap-8 lg:py-20">
-        <div className="flex flex-1 flex-col justify-center lg:pr-8">
-          <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <BrainHeartIcon className="mb-6 h-10 w-14 text-primary/60" />
-          </motion.div>
-
-          <motion.h1
-            id="hero-heading"
-            className="font-display text-5xl font-medium leading-none text-text sm:text-6xl lg:text-7xl"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            ¡Bienvenida!
-          </motion.h1>
-
-          <motion.p
-            className="font-accent mt-3 flex items-center gap-2 text-2xl text-primary sm:text-3xl"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-          >
-            Este es tu espacio
-            <Heart size={18} className="fill-primary/20 text-primary" aria-hidden="true" />
-          </motion.p>
-
-          <motion.p
-            className="font-display mt-8 text-3xl font-medium text-text sm:text-4xl"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            Soy {SITE_CONFIG.firstName}
-          </motion.p>
-
-          <ul className="mt-8 space-y-5">
-            {ABOUT_CONTENT.bioItems.map((item, index) => {
-              const Icon = bioIcons[item.id];
-              const parts = item.text.split(item.highlight);
-              return (
-                <motion.li
-                  key={item.id}
-                  className="flex items-start gap-4"
-                  initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.25 + index * 0.08 }}
-                >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-secondary/50 bg-white/70 text-primary">
-                    <Icon size={20} aria-hidden="true" />
-                  </div>
-                  <p className="pt-2 text-base leading-relaxed text-text-muted sm:text-lg">
-                    {parts[0]}
-                    <strong className="font-semibold text-text">{item.highlight}</strong>
-                    {parts[1]}
-                  </p>
-                </motion.li>
-              );
-            })}
-          </ul>
-
-          <motion.p
-            className="font-accent mt-10 flex items-center gap-2 text-2xl text-primary sm:text-3xl"
-            initial={prefersReducedMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            Gracias por estar acá
-            <Heart size={18} className="fill-primary/20 text-primary" aria-hidden="true" />
-          </motion.p>
-
-          <motion.p
-            className="mt-6 max-w-lg text-base leading-relaxed text-text-muted sm:text-lg"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-          >
-            Te acompaño a construir herramientas para tu{" "}
-            <strong className="font-semibold text-text">
-              bienestar y crecimiento personal
-            </strong>
-            .
-          </motion.p>
-
-          <motion.div
-            className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-          >
-            <Button href={SITE_CONFIG.bookingUrl} size="lg">
-              Reservar una consulta
-              <ArrowRight size={18} aria-hidden="true" />
-            </Button>
-            <Button href="#experiencia" variant="outline" size="lg">
-              Entrevista Match gratis
-            </Button>
-          </motion.div>
-
-          <motion.div
-            className="mt-10 flex items-center gap-4"
-            initial={prefersReducedMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.65 }}
-          >
-            <div className="h-px flex-1 max-w-16 bg-secondary/60" aria-hidden="true" />
-            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-              Psicóloga Clínica
-              <Heart size={12} className="text-primary/60" aria-hidden="true" />
-            </p>
-            <div className="h-px flex-1 max-w-16 bg-secondary/60" aria-hidden="true" />
-          </motion.div>
-        </div>
-
-        <motion.div
-          className="relative flex w-full flex-1 justify-center lg:justify-end"
-          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
-            <div
-              className="relative aspect-[3/4] w-full overflow-hidden shadow-2xl shadow-primary/10"
-              style={{
-                borderRadius: "60% 40% 45% 55% / 50% 55% 45% 50%",
-              }}
+      <Container className="relative py-10 sm:py-14 lg:py-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,38%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_420px] xl:gap-10">
+          <div className="relative z-10 max-w-xl lg:max-w-none">
+            <motion.div
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <Image
-                src={SITE_CONFIG.photo}
-                alt={`${SITE_CONFIG.name}, psicóloga clínica`}
-                fill
-                priority
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 90vw, 45vw"
+              <BrainHeartIcon className="mb-4 h-8 w-12 text-primary/60 sm:h-10 sm:w-14" />
+            </motion.div>
+
+            <motion.h1
+              id="hero-heading"
+              className="font-display text-3xl font-medium leading-tight text-text sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15] xl:text-5xl"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              {SITE_CONFIG.tagline}
+            </motion.h1>
+
+            <motion.p
+              className="font-accent mt-2 flex items-center gap-2 text-xl text-primary sm:text-2xl"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+            >
+              Este es tu espacio
+              <Heart
+                size={16}
+                className="fill-primary/20 text-primary"
+                aria-hidden="true"
               />
+            </motion.p>
+
+            <motion.p
+              className="font-display mt-5 text-2xl font-medium text-text sm:text-3xl"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              Soy {SITE_CONFIG.firstName}
+            </motion.p>
+
+            <div className="mt-6 rounded-3xl border border-white/60 bg-white/50 p-4 shadow-sm backdrop-blur-sm sm:p-5">
+              <ul className="grid gap-4 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-4">
+                {ABOUT_CONTENT.bioItems.map((item, index) => {
+                  const Icon = bioIcons[item.id];
+                  const parts = item.text.split(item.highlight);
+                  const isWide =
+                    item.id === "space" ||
+                    item.id === "audience" ||
+                    item.id === "approach";
+
+                  return (
+                    <motion.li
+                      key={item.id}
+                      className={isWide ? "sm:col-span-2" : undefined}
+                      initial={
+                        prefersReducedMotion ? false : { opacity: 0, y: 12 }
+                      }
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25 + index * 0.06,
+                      }}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-secondary/40 bg-white/80 text-primary">
+                          <Icon size={16} aria-hidden="true" />
+                        </div>
+                        <p className="pt-1 text-sm leading-relaxed text-text-muted sm:text-[0.9375rem]">
+                          {parts[0]}
+                          <strong className="font-semibold text-text">
+                            {item.highlight}
+                          </strong>
+                          {parts[1]}
+                        </p>
+                      </div>
+                    </motion.li>
+                  );
+                })}
+              </ul>
             </div>
 
-            <motion.div
-              className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-8"
-              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+            <motion.p
+              className="font-accent mt-5 flex items-center gap-2 text-xl text-primary sm:text-2xl"
+              initial={prefersReducedMotion ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <ValuesSeal />
+              Gracias por estar acá
+              <Heart
+                size={16}
+                className="fill-primary/20 text-primary"
+                aria-hidden="true"
+              />
+            </motion.p>
+
+            <motion.p
+              className="mt-3 text-sm leading-relaxed text-text-muted sm:text-base"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.55 }}
+            >
+              {SITE_CONFIG.mission}
+            </motion.p>
+
+            <motion.div
+              className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
+            >
+              <Button href={SITE_CONFIG.bookingUrl} size="lg">
+                Reservar una consulta
+                <ArrowRight size={18} aria-hidden="true" />
+              </Button>
+              <Button href="#experiencia" variant="outline" size="lg">
+                Entrevista Match gratis
+              </Button>
             </motion.div>
 
             <motion.div
-              className="absolute -right-2 top-8 rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm sm:-right-6"
-              initial={prefersReducedMotion ? false : { opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-6 flex items-center gap-3"
+              initial={prefersReducedMotion ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.65 }}
             >
-              <p className="font-accent text-xl text-primary">15 min</p>
-              <p className="text-xs text-text-muted">Entrevista Match gratuita</p>
+              <div
+                className="h-px w-10 bg-secondary/60"
+                aria-hidden="true"
+              />
+              <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted sm:text-xs">
+                Psicóloga Clínica
+                <Heart
+                  size={11}
+                  className="text-primary/60"
+                  aria-hidden="true"
+                />
+              </p>
             </motion.div>
           </div>
-        </motion.div>
+
+          <motion.div
+            className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:mx-0 lg:max-w-none"
+            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div
+              className="absolute -left-6 top-1/2 hidden h-[85%] w-24 -translate-y-1/2 rounded-full bg-white/50 blur-2xl lg:block xl:-left-10 xl:w-32"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -inset-3 rounded-[2.5rem] bg-gradient-to-br from-white/70 via-lavender/40 to-secondary/30 sm:-inset-4"
+              aria-hidden="true"
+            />
+
+            <div className="relative">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-t-[999px] rounded-b-3xl shadow-xl shadow-primary/10 ring-1 ring-white/60">
+                <Image
+                  src={SITE_CONFIG.photo}
+                  alt={`${SITE_CONFIG.name}, psicóloga clínica`}
+                  fill
+                  priority
+                  className="object-cover object-[center_15%]"
+                  sizes="(max-width: 1024px) 320px, 420px"
+                />
+              </div>
+
+              <motion.div
+                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-5"
+                initial={
+                  prefersReducedMotion ? false : { opacity: 0, scale: 0.9 }
+                }
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                <ValuesSeal />
+              </motion.div>
+
+              <motion.div
+                className="absolute -right-1 top-6 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur-sm sm:-right-3 sm:top-8 sm:px-5 sm:py-4"
+                initial={
+                  prefersReducedMotion ? false : { opacity: 0, x: 16 }
+                }
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <p className="font-accent text-lg text-primary sm:text-xl">
+                  15 min
+                </p>
+                <p className="text-[11px] text-text-muted sm:text-xs">
+                  Entrevista Match gratuita
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </Container>
     </section>
   );

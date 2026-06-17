@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   keywords: [
     "psicóloga",
     "psicología clínica",
-    "ansiedad mujeres profesionales",
+    "terapia adolescentes",
+    "terapia jóvenes adultos",
     "terapia individual",
     "burnout",
     "autoestima",

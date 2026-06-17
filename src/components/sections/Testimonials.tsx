@@ -59,7 +59,7 @@ export function Testimonials() {
         <SectionTitle
           eyebrow="Lo que dicen mis pacientes"
           title="Testimonios"
-          subtitle="Historias de mujeres que decidieron priorizar su bienestar emocional y dieron el primer paso."
+          subtitle="Historias de personas que decidieron priorizar su bienestar emocional y dieron el primer paso."
         />
 
         <div
