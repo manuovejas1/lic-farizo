@@ -9,16 +9,14 @@ import type {
 
 export const SITE_CONFIG = {
   name: "Lic. Camila Farizo",
-  firstName: "Camila",
-  age: 28,
-  title: "Psicóloga Clínica - M.N 89257",
-  specialization: "Psicóloga Clínica · M.N 89257",
-  tagline: "Te acompaño a construir herramientas para tu bienestar y crecimiento personal.",
-  puv: "Creé este espacio para hablar de salud mental de una forma cercana, práctica y sin juicios.",
+  title: "Psicóloga Clínica - ",
+  specialization: "Psicologa Clinica - M.N 89257",
+  tagline: "Un espacio seguro para florecer a tu ritmo",
+  puv: "Un espacio seguro y moderno donde la ciencia psicológica se encuentra con la empatía humana para ayudarte a florecer a tu propio ritmo.",
   description:
     "Terapia psicológica online, accesible, empática y basada en evidencia. Te acompaño a gestionar tus emociones desde donde estés.",
   mission:
-    "Te acompaño a construir herramientas para tu bienestar y crecimiento personal.",
+    "Ofrecer terapia psicológica online accesible, empática y basada en evidencia, ayudando a las pacientes a gestionar sus emociones y mejorar su calidad de vida.",
   url: "https://lic.camilafarizo.com",
   email: "camilafarizo@gmail.com",
   phone: "+541136665948",
@@ -27,14 +25,13 @@ export const SITE_CONFIG = {
   instagramHandle: "@lic.camilafarizo",
   location: "Buenos Aires, Argentina · Consultas 100% online",
   bookingUrl: "#contacto",
-  photo:
-    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
 } as const;
 
 export const BRAND_VALUES = [
   "Empatía",
+  "Confidencialidad",
+  "Autenticidad",
   "Respeto",
-  "Acompañamiento",
   "Crecimiento",
 ] as const;
 
@@ -65,7 +62,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: "self-esteem",
-    title: "Autoestima y amor propio",
+    title: "Autoestima",
     description:
       "Trabajo profundo para sanar la autocrítica, reconectar con tu valor y cultivar una relación más amorosa contigo misma.",
     icon: "heart",
@@ -91,8 +88,22 @@ export const BENEFITS: Benefit[] = [
     id: "empathy",
     title: "Empatía",
     description:
-      "Te escucho con calidez y sin juicios. Una guía comprensiva que te acompaña desde un lugar humano y cercano.",
+      "Una guía comprensiva, no una figura de autoridad inalcanzable. Te escucho con calidez y sin juicios.",
     icon: "heart",
+  },
+  {
+    id: "confidentiality",
+    title: "Confidencialidad",
+    description:
+      "Tu privacidad es sagrada. Todo lo que compartas permanece protegido bajo el secreto profesional.",
+    icon: "lock",
+  },
+  {
+    id: "authenticity",
+    title: "Autenticidad",
+    description:
+      "Un espacio genuino donde puedes ser tú misma, sin máscaras ni expectativas de perfección.",
+    icon: "sparkles",
   },
   {
     id: "respect",
@@ -102,17 +113,10 @@ export const BENEFITS: Benefit[] = [
     icon: "shield",
   },
   {
-    id: "accompaniment",
-    title: "Acompañamiento",
-    description:
-      "No estás sola en el camino. Te acompaño a construir herramientas concretas para tu bienestar emocional.",
-    icon: "users",
-  },
-  {
     id: "growth",
     title: "Crecimiento",
     description:
-      "Herramientas reales y prácticas para que avances hacia el bienestar emocional y el crecimiento personal.",
+      "Herramientas reales y prácticas para que avances hacia el bienestar emocional de forma sostenible.",
     icon: "sprout",
   },
 ];
@@ -170,7 +174,7 @@ export const TESTIMONIALS: Testimonial[] = [
     content:
       "Llegué con ansiedad y sobrepensamiento constante. Camila me dio herramientas prácticas y hoy duermo mejor y disfruto más el presente.",
     rating: 5,
-  },
+  }
 ];
 
 export const FAQ_ITEMS: FAQItem[] = [
@@ -219,25 +223,13 @@ export const FAQ_ITEMS: FAQItem[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  bioItems: [
-    {
-      id: "age",
-      text: "Tengo 28 años.",
-      highlight: "28 años",
-    },
-    {
-      id: "education",
-      text: "Me recibí en la Universidad de Buenos Aires.",
-      highlight: "Universidad de Buenos Aires",
-    },
-    {
-      id: "space",
-      text: "Creé este espacio para hablar de salud mental de una forma cercana, práctica y sin juicios.",
-      highlight: "salud mental",
-    },
-  ],
+  greeting: `¡Hola! Soy ${SITE_CONFIG.name}, Psicóloga Clínica.`,
+  story: `Mi misión es ofrecerte un espacio seguro y libre de juicios donde podamos explorar juntas tus emociones. Sé que dar el primer paso y pedir ayuda puede dar miedo, pero quiero que sepas que aquí encontrarás empatía, contención y herramientas reales.
+
+No tienes que poder con todo sola. Mi enfoque combina la ciencia psicológica con una presencia profundamente humana: cálida, reflexiva y serena. Creo que cada persona posee los recursos para transformar su vida; mi rol es acompañarte a descubrirlos a tu propio ritmo.`,
+  cta: "¿Empezamos tu proceso?",
   education: [
-    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) · M.N 89257",
+    "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) - M.N 89257"
   ],
   specialties: [
     "Ansiedad Generalizada",
