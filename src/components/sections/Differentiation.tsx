@@ -35,7 +35,7 @@ export function Differentiation() {
       <Container className="relative">
         <SectionTitle
           eyebrow="Tu ventaja"
-          title="Una experiencia pensada para ti"
+          title="Una experiencia pensada para vos"
           subtitle="Más que una sesión: un acompañamiento integral que te hace sentir cuidada desde el primer contacto."
         />
 
