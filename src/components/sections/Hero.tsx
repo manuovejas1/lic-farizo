@@ -211,13 +211,13 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              <Button href={SITE_CONFIG.bookingUrl} size="lg">
-                Reservar una consulta
-                <ArrowRight size={18} aria-hidden="true" />
-              </Button>
-              <Button href="#experiencia" variant="outline" size="lg">
-                Entrevista Match gratis
-              </Button>
+            <Button href={SITE_CONFIG.bookingUrl} size="lg">
+              Reservar una consulta
+              <ArrowRight size={18} aria-hidden="true" />
+            </Button>
+            <Button href="#servicios" variant="outline" size="lg">
+              Ver servicios
+            </Button>
             </motion.div>
 
             <motion.div
@@ -277,22 +277,6 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <ValuesSeal />
-              </motion.div>
-
-              <motion.div
-                className="absolute right-3 top-3 rounded-xl bg-white/95 px-3 py-2 shadow-lg backdrop-blur-sm sm:-right-3 sm:top-8 sm:rounded-2xl sm:px-5 sm:py-4"
-                initial={
-                  prefersReducedMotion ? false : { opacity: 0, x: 16 }
-                }
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <p className="font-accent text-base text-primary sm:text-xl">
-                  15 min
-                </p>
-                <p className="text-[10px] text-text-muted sm:text-xs">
-                  Entrevista Match gratuita
-                </p>
               </motion.div>
             </div>
 

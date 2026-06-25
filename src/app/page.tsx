@@ -1,5 +1,6 @@
 import { About } from "@/components/sections/About";
 import { Benefits } from "@/components/sections/Benefits";
+import { Booking } from "@/components/sections/Booking";
 import { Contact } from "@/components/sections/Contact";
 import { CTA } from "@/components/sections/CTA";
 import { Differentiation } from "@/components/sections/Differentiation";
@@ -16,6 +17,7 @@ export default function Home() {
       <Benefits />
       <Differentiation />
       <FAQ />
+      <Booking />
       <CTA />
       <Contact />
     </>

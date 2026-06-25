@@ -6,7 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_MESSAGE =
-  "Hola, me gustaría agendar una entrevista Match o consulta. ¿Podrías brindarme más información?";
+  "Hola, me gustaría agendar una consulta. ¿Podrías brindarme más información?";
 
 export function WhatsAppButton() {
   const prefersReducedMotion = useReducedMotion();

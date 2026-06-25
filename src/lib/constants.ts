@@ -29,7 +29,9 @@ export const SITE_CONFIG = {
   instagram: "https://www.instagram.com/lic.camilafarizo/",
   instagramHandle: "@lic.camilafarizo",
   location: "Buenos Aires, Argentina · Consultas 100% online",
-  bookingUrl: "#contacto",
+  bookingUrl: "#reservar",
+  calendarEmbedUrl:
+    "https://calendar.google.com/calendar/appointments/schedules/AcZssZ17ITqWmXp-GPOUy8mZYsvRL2JrU6_hlCaHkjchUCNDjNgodE8w954c_ruOPlPqiFJhwesihkQs?gv=true",
   photo: "/camila-farizo.png",
 } as const;
 
@@ -45,7 +47,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Servicios", href: "#servicios" },
   { label: "Valores", href: "#beneficios" },
-  { label: "Experiencia", href: "#experiencia" },
+  { label: "Reservar", href: "#reservar" },
   { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -128,10 +130,10 @@ export const DIFFERENTIATORS: Differentiator[] = [
     icon: "gift",
   },
   {
-    id: "match-interview",
-    title: "Entrevista Match de 15 min",
+    id: "booking",
+    title: "Reserva online",
     description:
-      "Videollamada breve y gratuita para asegurar que nos conectemos y que te sientas en el espacio correcto.",
+      "Agendá tu sesión directamente desde el calendario, eligiendo el horario que mejor se adapte a tu rutina.",
     icon: "video",
   },
   {
@@ -177,10 +179,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    id: "match",
-    question: "¿Qué es la entrevista Match de 15 minutos?",
+    id: "booking",
+    question: "¿Cómo reservo una sesión?",
     answer:
-      "Es una videollamada breve y gratuita antes de tu primera sesión. Nos permite conocernos, resolver dudas y confirmar que te sientes cómodo/a con mi forma de acompañarte.",
+      "Podés elegir día y horario directamente en el calendario de la sección Reservar. Una vez confirmada la cita, recibirás los detalles por email.",
   },
   {
     id: "audience",
@@ -222,7 +224,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "cost",
     question: "¿Cuál es el costo de las sesiones?",
     answer:
-      "Podés solicitar información detallada sobre el valor de las sesiones online al agendar tu entrevista Match gratuita.",
+      "Podés solicitar información detallada sobre el valor de las sesiones online al reservar tu consulta o escribiéndome por WhatsApp.",
   },
   {
     id: "cancellation",

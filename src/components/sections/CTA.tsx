@@ -34,8 +34,8 @@ export function CTA() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/85 sm:text-lg">
-            Agenda tu entrevista Match de 15 minutos, sin costo. Es el primer
-            paso para saber si este es tu espacio seguro.
+            Elegí el día y horario que mejor te convenga desde el calendario
+            online. Tu bienestar empieza con dar el primer paso.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -44,16 +44,16 @@ export function CTA() {
               size="lg"
               className="bg-white text-primary shadow-lg shadow-black/10 hover:bg-white/95"
             >
-              Agendar consulta
+              Reservar consulta
               <ArrowRight size={18} aria-hidden="true" />
             </Button>
             <Button
-              href="#experiencia"
+              href="#contacto"
               size="lg"
               variant="outline"
               className="border-white/40 text-white hover:border-white hover:bg-white/10"
             >
-              Conocer la experiencia
+              Escribirme
             </Button>
           </div>
         </motion.div>

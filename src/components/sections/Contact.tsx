@@ -69,7 +69,7 @@ export function Contact() {
         <SectionTitle
           eyebrow="Estoy aquí para ti"
           title="Contacto"
-          subtitle="Completa el formulario para agendar tu entrevista Match gratuita o tu primera consulta. Responderé a la brevedad."
+          subtitle="Reservá tu sesión online o escribime si tenés alguna consulta. Responderé a la brevedad."
         />
 
         <div className="grid gap-12 lg:grid-cols-5">

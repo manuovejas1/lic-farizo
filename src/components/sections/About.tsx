@@ -102,7 +102,7 @@ export function About() {
           </motion.div>
 
           <Button href={SITE_CONFIG.bookingUrl}>
-            Agendar entrevista Match
+            Reservar consulta
           </Button>
         </div>
       </Container>

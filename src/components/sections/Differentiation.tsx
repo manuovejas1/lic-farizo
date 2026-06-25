@@ -36,7 +36,7 @@ export function Differentiation() {
         <SectionTitle
           eyebrow="Tu ventaja"
           title="Una experiencia pensada para vos"
-          subtitle="Más que una sesión: un acompañamiento integral que te hace sentir cuidada desde el primer contacto."
+          subtitle="Más que una sesión: un acompañamiento integral que te hace sentir cuidado/a desde el primer contacto."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
