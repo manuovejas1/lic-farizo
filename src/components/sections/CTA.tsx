@@ -42,10 +42,11 @@ export function CTA() {
             <Button
               href={SITE_CONFIG.bookingUrl}
               size="lg"
-              className="bg-white text-primary shadow-lg shadow-black/10 hover:bg-white/95"
+              variant="secondary"
+              className="bg-white text-text shadow-lg shadow-black/20 hover:bg-lavender hover:text-text"
             >
               Reservar consulta
-              <ArrowRight size={18} aria-hidden="true" />
+              <ArrowRight size={18} aria-hidden="true" className="text-text" />
             </Button>
             <Button
               href="#contacto"
