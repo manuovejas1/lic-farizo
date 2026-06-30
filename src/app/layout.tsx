@@ -109,7 +109,7 @@ const jsonLd = {
     name: "Argentina",
   },
   knowsAbout: [SITE_CONFIG.specialization, "Ansiedad", "Autoestima", "Relaciones"],
-  sameAs: [SITE_CONFIG.instagram],
+  sameAs: [SITE_CONFIG.instagram, SITE_CONFIG.linkedin],
   availableService: [
     { "@type": "MedicalTherapy", name: "Terapia individual" },
     { "@type": "MedicalTherapy", name: "Terapia para ansiedad y estrés" },

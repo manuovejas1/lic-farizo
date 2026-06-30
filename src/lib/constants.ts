@@ -28,6 +28,8 @@ export const SITE_CONFIG = {
   whatsapp: "541136665948",
   instagram: "https://www.instagram.com/lic.camilafarizo/",
   instagramHandle: "@lic.camilafarizo",
+  linkedin: "https://www.linkedin.com/in/camila-farizo/",
+  linkedinHandle: "Camila Farizo",
   location: "Buenos Aires, Argentina · Consultas 100% online",
   bookingUrl: "#reservar",
   calendarEmbedUrl:
@@ -264,6 +266,8 @@ export const ABOUT_CONTENT = {
   ],
   education: [
     "Licenciatura en Psicología — Universidad de Buenos Aires (UBA) · M.N 89257",
+    "Psicodiagnóstico clínico — Institución Fernando Ulloa",
+    "Evaluación neuropsicológica en el ámbito tribunalicio — Universidad de Buenos Aires",
   ],
   specialties: [
     "Ansiedad Generalizada",

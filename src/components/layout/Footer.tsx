@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { LinkedInIcon } from "@/components/ui/LinkedInIcon";
 import { Heart, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -20,16 +21,28 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-muted">
               {SITE_CONFIG.description}
             </p>
-            <a
-              href={SITE_CONFIG.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-primary"
-              aria-label={`Instagram de ${SITE_CONFIG.name}`}
-            >
-              <InstagramIcon size={18} />
-              {SITE_CONFIG.instagramHandle}
-            </a>
+            <div className="mt-4 flex flex-col gap-2">
+              <a
+                href={SITE_CONFIG.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-primary"
+                aria-label={`Instagram de ${SITE_CONFIG.name}`}
+              >
+                <InstagramIcon size={18} />
+                {SITE_CONFIG.instagramHandle}
+              </a>
+              <a
+                href={SITE_CONFIG.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-primary"
+                aria-label={`LinkedIn de ${SITE_CONFIG.name}`}
+              >
+                <LinkedInIcon size={18} />
+                {SITE_CONFIG.linkedinHandle}
+              </a>
+            </div>
           </div>
 
           <div>

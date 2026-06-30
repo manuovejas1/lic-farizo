@@ -9,6 +9,7 @@ import { getWhatsAppUrl } from "@/lib/utils";
 import type { ContactFormData } from "@/types";
 import { motion, useReducedMotion } from "framer-motion";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { LinkedInIcon } from "@/components/ui/LinkedInIcon";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
@@ -113,6 +114,19 @@ export function Contact() {
                       <InstagramIcon size={18} />
                     </span>
                     {SITE_CONFIG.instagramHandle}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={SITE_CONFIG.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-sm text-text-muted transition-colors hover:text-primary sm:text-base"
+                  >
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-lavender/50 text-primary">
+                      <LinkedInIcon size={18} />
+                    </span>
+                    {SITE_CONFIG.linkedinHandle}
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-text-muted sm:text-base">
